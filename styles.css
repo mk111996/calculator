@@ -1,0 +1,57 @@
+body {
+    background: #f1faee;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+    background: #457B9D;
+    margin: 200px auto;
+    border-radius: 50px;
+    padding: 10px;
+    color: #1D3557;
+}
+
+.screen {
+    width: 500px;
+    height: 100px;
+    background: #A8DADC;
+    margin: auto;
+    border-radius: 40px;
+    font-size: 48px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.operation-result {
+    vertical-align: middle;
+}
+
+.operations {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.operations button {
+    width: 115px;
+    height: 67.5px;
+    border-radius: 20px;
+    border-style: none;
+    margin: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #F1FAEE;
+    cursor: pointer;
+}
+
+.operations button:hover {
+    background: #1D3557;
+    color: #F1FAEE;
+}
+
+.operations button:active {
+    background: #E63946;
+}
