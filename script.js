@@ -3,8 +3,7 @@ const numberButtons = document.querySelectorAll("#number");
 const operationButtons = document.querySelectorAll("#operation");
 const equalOperation = document.querySelector("#equal");
 const clearOperation = document.querySelector("#clear");
-const turnOn = document.querySelector("#on");
-const turnOff = document.querySelector("#off");
+const deleteLast = document.querySelector("#ac");
 
 let result = "";
 
@@ -14,13 +13,17 @@ equalOperation.addEventListener("click", calculate);
 
 clearOperation.addEventListener("click", clear);
 
-turnOn.addEventListener("click", on);
-
-turnOff.addEventListener("click", off);
+deleteLast.addEventListener("click", oneLess);
 
 numberButtons.forEach((button) => {
     button.addEventListener("click", displayNumber)
 });
+
+function oneLess() {
+    resultNumber.innerHTML = resultNumber.innerHTML
+    .toString()
+    .slice(0, -1);
+}
 
 function displayNumber() {
     if (this.textContent === "." && resultNumber.innerHTML.includes(".")) return;
@@ -51,12 +54,4 @@ function calculate() {
 
 function clear() {
     resultNumber.textContent = "0";
-}
-
-function on() {
-    resultNumber.textContent = "0";
-}
-
-function off() {
-    resultNumber.textContent = "";
 }
